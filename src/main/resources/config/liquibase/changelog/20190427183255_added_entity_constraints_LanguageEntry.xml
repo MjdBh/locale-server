@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity LanguageEntry.
+    -->
+    <changeSet id="20190427183255-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="language_local_id"
+                                 baseTableName="language_entry"
+                                 constraintName="fk_language_entry_language_local_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="language_local"/>
+
+        <addForeignKeyConstraint baseColumnNames="language_key_id"
+                                 baseTableName="language_entry"
+                                 constraintName="fk_language_entry_language_key_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="language_key"/>
+
+    </changeSet>
+</databaseChangeLog>

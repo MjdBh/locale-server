@@ -1,0 +1,8 @@
+
+  ${AnsiColor.GREEN} (  )   ${AnsiColor.CYAN}(  _  )/ __)  /__\  (  )
+  ${AnsiColor.GREEN}  )(__  ${AnsiColor.CYAN} )(_)(( (__  /(__)\  )(__
+  ${AnsiColor.GREEN} (____) ${AnsiColor.CYAN}(_____)\___)(__)(__)(____)
+
+
+${AnsiColor.BRIGHT_BLUE}:: Saxms 🤓  :: Running Spring Boot ${spring-boot.version} ::
+:: https://saxms.de :: ${AnsiColor.DEFAULT}

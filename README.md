@@ -1,4 +1,4 @@
-## Locale Server with support multiple language support
+## Locale Server with support multiple language
 
 * Parse XML to Java 	
 * Add entry	

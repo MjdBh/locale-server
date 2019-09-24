@@ -36,7 +36,7 @@ public class LanguageEntry implements Serializable {
     @JsonIgnoreProperties("languageEntries")
     private LanguageKey languageKey;
 
-    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+   
     public Long getId() {
         return id;
     }
@@ -96,7 +96,6 @@ public class LanguageEntry implements Serializable {
     public void setLanguageKey(LanguageKey languageKey) {
         this.languageKey = languageKey;
     }
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {

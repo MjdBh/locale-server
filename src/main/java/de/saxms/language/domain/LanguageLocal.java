@@ -31,7 +31,7 @@ public class LanguageLocal implements Serializable {
 
     @OneToMany(mappedBy = "languageLocal")
     private Set<LanguageEntry> languageEntries = new HashSet<>();
-    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+   
     public Long getId() {
         return id;
     }
@@ -90,7 +90,6 @@ public class LanguageLocal implements Serializable {
     public void setLanguageEntries(Set<LanguageEntry> languageEntries) {
         this.languageEntries = languageEntries;
     }
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
     public boolean equals(Object o) {

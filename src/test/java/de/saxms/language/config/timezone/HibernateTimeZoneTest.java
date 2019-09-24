@@ -1,6 +1,6 @@
 package de.saxms.language.config.timezone;
 
-import de.saxms.language.LocalServerApp;
+import de.saxms.language.LocaleServerApp;
 import de.saxms.language.repository.timezone.DateTimeWrapper;
 import de.saxms.language.repository.timezone.DateTimeWrapperRepository;
 import org.junit.Before;
@@ -23,7 +23,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Unit tests for the UTC Hibernate configuration.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = LocalServerApp.class)
+@SpringBootTest(classes = LocaleServerApp.class)
 public class HibernateTimeZoneTest {
 
     @Autowired

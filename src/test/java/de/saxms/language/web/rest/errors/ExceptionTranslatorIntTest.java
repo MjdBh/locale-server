@@ -1,6 +1,6 @@
 package de.saxms.language.web.rest.errors;
 
-import de.saxms.language.LocalServerApp;
+import de.saxms.language.LocaleServerApp;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ExceptionTranslator
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = LocalServerApp.class)
+@SpringBootTest(classes = LocaleServerApp.class)
 public class ExceptionTranslatorIntTest {
 
     @Autowired

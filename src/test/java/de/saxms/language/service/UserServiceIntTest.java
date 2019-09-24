@@ -1,6 +1,6 @@
 package de.saxms.language.service;
 
-import de.saxms.language.LocalServerApp;
+import de.saxms.language.LocaleServerApp;
 import de.saxms.language.config.Constants;
 import de.saxms.language.domain.User;
 import de.saxms.language.repository.UserRepository;
@@ -36,7 +36,7 @@ import static org.mockito.Mockito.when;
  * @see UserService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = LocalServerApp.class)
+@SpringBootTest(classes = LocaleServerApp.class)
 @Transactional
 public class UserServiceIntTest {
 

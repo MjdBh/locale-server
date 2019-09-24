@@ -22,13 +22,13 @@ import java.util.Collection;
 
 @SpringBootApplication
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
-public class LocalServerApp {
+public class LocaleServerApp {
 
-    private static final Logger log = LoggerFactory.getLogger(LocalServerApp.class);
+    private static final Logger log = LoggerFactory.getLogger(LocaleServerApp.class);
 
     private final Environment env;
 
-    public LocalServerApp(Environment env) {
+    public LocaleServerApp(Environment env) {
         this.env = env;
     }
 
@@ -58,7 +58,7 @@ public class LocalServerApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(LocalServerApp.class);
+        SpringApplication app = new SpringApplication(LocaleServerApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);

@@ -30,7 +30,7 @@ public class LanguageEntry implements Serializable {
 
     @ManyToOne
     @JsonIgnoreProperties("languageEntries")
-    private LanguageLocal languageLocal;
+    private LanguageLocale languageLocale;
 
     @ManyToOne
     @JsonIgnoreProperties("languageEntries")
@@ -71,17 +71,17 @@ public class LanguageEntry implements Serializable {
         this.lastUpdate = lastUpdate;
     }
 
-    public LanguageLocal getLanguageLocal() {
-        return languageLocal;
+    public LanguageLocale getLanguageLocale() {
+        return languageLocale;
     }
 
-    public LanguageEntry languageLocal(LanguageLocal languageLocal) {
-        this.languageLocal = languageLocal;
+    public LanguageEntry languageLocal(LanguageLocale languageLocale) {
+        this.languageLocale = languageLocale;
         return this;
     }
 
-    public void setLanguageLocal(LanguageLocal languageLocal) {
-        this.languageLocal = languageLocal;
+    public void setLanguageLocale(LanguageLocale languageLocale) {
+        this.languageLocale = languageLocale;
     }
 
     public LanguageKey getLanguageKey() {

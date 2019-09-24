@@ -34,7 +34,7 @@ public class LanguageLocalDataBaseAdminServiceImpl implements LanguageLocalAdmin
     public boolean saveEntry(String local, LanguageEntryDTO entryDTO) {
         LanguageEntry languageEntry = new LanguageEntry();
         languageEntry.setEntryValue(entryDTO.getContent());
-        languageEntry.setLanguageLocal(languageLocalRepository.getByAbbreviation(local));
+        languageEntry.setLanguageLocale(languageLocalRepository.getByAbbreviation(local));
         LanguageKey key = languageKeyRepository.getByEntryKey(entryDTO.getContent()).orElse(languageKeyRepository.save(new LanguageKey(entryDTO.getId())));
         languageEntry.setLanguageKey(key);
         languageEntry.setLastUpdate(Instant.now());

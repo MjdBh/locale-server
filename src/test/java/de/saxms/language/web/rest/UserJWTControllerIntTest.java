@@ -1,6 +1,6 @@
 package de.saxms.language.web.rest;
 
-import de.saxms.language.LocalServerApp;
+import de.saxms.language.LocaleServerApp;
 import de.saxms.language.domain.User;
 import de.saxms.language.repository.UserRepository;
 import de.saxms.language.security.jwt.TokenProvider;
@@ -32,7 +32,7 @@ import static org.hamcrest.Matchers.not;
  * @see UserJWTController
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = LocalServerApp.class)
+@SpringBootTest(classes = LocaleServerApp.class)
 public class UserJWTControllerIntTest {
 
     @Autowired

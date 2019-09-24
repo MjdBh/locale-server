@@ -1,7 +1,7 @@
 package de.saxms.language.service.mapper;
 
 
-import de.saxms.language.LocalServerApp;
+import de.saxms.language.LocaleServerApp;
 import de.saxms.language.domain.User;
 import de.saxms.language.service.dto.UserDTO;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -25,7 +25,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @see UserMapper
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = LocalServerApp.class)
+@SpringBootTest(classes = LocaleServerApp.class)
 public class UserMapperTest {
 
     private static final String DEFAULT_LOGIN = "johndoe";

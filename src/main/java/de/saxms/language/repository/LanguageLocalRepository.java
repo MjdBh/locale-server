@@ -1,17 +1,17 @@
 package de.saxms.language.repository;
 
-import de.saxms.language.domain.LanguageLocal;
+import de.saxms.language.domain.LanguageLocale;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 
 
 /**
- * Spring Data  repository for the LanguageLocal entity.
+ * Spring Data  repository for the LanguageLocale entity.
  */
 @SuppressWarnings("unused")
 @Repository
-public interface LanguageLocalRepository extends JpaRepository<LanguageLocal, Long> {
+public interface LanguageLocalRepository extends JpaRepository<LanguageLocale, Long> {
 
-    LanguageLocal getByAbbreviation(String abbreviation);
+    LanguageLocale getByAbbreviation(String abbreviation);
 
 }

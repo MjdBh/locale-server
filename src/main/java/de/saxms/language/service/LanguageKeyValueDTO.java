@@ -1,6 +1,6 @@
 package de.saxms.language.service;
 
-import de.saxms.language.domain.LanguageLocal;
+import de.saxms.language.domain.LanguageLocale;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -11,7 +11,7 @@ public class LanguageKeyValueDTO implements Serializable {
     private Long id;
     private String entryValue;
     private Instant lastUpdate;
-    private LanguageLocal languageLocal;
+    private LanguageLocale languageLocale;
     private String entryKey;
 
     public Long getId() {
@@ -38,12 +38,12 @@ public class LanguageKeyValueDTO implements Serializable {
         this.lastUpdate = lastUpdate;
     }
 
-    public LanguageLocal getLanguageLocal() {
-        return languageLocal;
+    public LanguageLocale getLanguageLocale() {
+        return languageLocale;
     }
 
-    public void setLanguageLocal(LanguageLocal languageLocal) {
-        this.languageLocal = languageLocal;
+    public void setLanguageLocale(LanguageLocale languageLocale) {
+        this.languageLocale = languageLocale;
     }
 
     public String getEntryKey() {
@@ -62,12 +62,12 @@ public class LanguageKeyValueDTO implements Serializable {
         return Objects.equals(id, that.id) &&
             Objects.equals(entryValue, that.entryValue) &&
             Objects.equals(lastUpdate, that.lastUpdate) &&
-            Objects.equals(languageLocal, that.languageLocal) &&
+            Objects.equals(languageLocale, that.languageLocale) &&
             Objects.equals(entryKey, that.entryKey);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, entryValue, lastUpdate, languageLocal, entryKey);
+        return Objects.hash(id, entryValue, lastUpdate, languageLocale, entryKey);
     }
 }

@@ -1,6 +1,6 @@
 package de.saxms.language.cucumber;
 
-import de.saxms.language.LocalServerApp;
+import de.saxms.language.LocaleServerApp;
 import cucumber.api.java.Before;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
@@ -8,7 +8,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 @SpringBootTest
 @WebAppConfiguration
-@ContextConfiguration(classes = LocalServerApp.class)
+@ContextConfiguration(classes = LocaleServerApp.class)
 public class CucumberContextConfiguration {
 
     @Before

@@ -1,6 +1,6 @@
 package de.saxms.language.security;
 
-import de.saxms.language.LocalServerApp;
+import de.saxms.language.LocaleServerApp;
 import de.saxms.language.domain.User;
 import de.saxms.language.repository.UserRepository;
 
@@ -26,7 +26,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @see DomainUserDetailsService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = LocalServerApp.class)
+@SpringBootTest(classes = LocaleServerApp.class)
 @Transactional
 public class DomainUserDetailsServiceIntTest {
 

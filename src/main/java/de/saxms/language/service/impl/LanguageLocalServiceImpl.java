@@ -1,7 +1,7 @@
 package de.saxms.language.service.impl;
 
+import de.saxms.language.domain.LanguageLocale;
 import de.saxms.language.service.LanguageLocalService;
-import de.saxms.language.domain.LanguageLocal;
 import de.saxms.language.repository.LanguageLocalRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
 /**
- * Service Implementation for managing LanguageLocal.
+ * Service Implementation for managing LanguageLocale.
  */
 @Service
 @Transactional
@@ -29,15 +29,15 @@ public class LanguageLocalServiceImpl implements LanguageLocalService {
     }
 
     /**
-     * Save a languageLocal.
+     * Save a languageLocale.
      *
-     * @param languageLocal the entity to save
+     * @param languageLocale the entity to save
      * @return the persisted entity
      */
     @Override
-    public LanguageLocal save(LanguageLocal languageLocal) {
-        log.debug("Request to save LanguageLocal : {}", languageLocal);
-        return languageLocalRepository.save(languageLocal);
+    public LanguageLocale save(LanguageLocale languageLocale) {
+        log.debug("Request to save LanguageLocale : {}", languageLocale);
+        return languageLocalRepository.save(languageLocale);
     }
 
     /**
@@ -48,7 +48,7 @@ public class LanguageLocalServiceImpl implements LanguageLocalService {
      */
     @Override
     @Transactional(readOnly = true)
-    public Page<LanguageLocal> findAll(Pageable pageable) {
+    public Page<LanguageLocale> findAll(Pageable pageable) {
         log.debug("Request to get all LanguageLocals");
         return languageLocalRepository.findAll(pageable);
     }
@@ -62,8 +62,8 @@ public class LanguageLocalServiceImpl implements LanguageLocalService {
      */
     @Override
     @Transactional(readOnly = true)
-    public Optional<LanguageLocal> findOne(Long id) {
-        log.debug("Request to get LanguageLocal : {}", id);
+    public Optional<LanguageLocale> findOne(Long id) {
+        log.debug("Request to get LanguageLocale : {}", id);
         return languageLocalRepository.findById(id);
     }
 
@@ -74,7 +74,7 @@ public class LanguageLocalServiceImpl implements LanguageLocalService {
      */
     @Override
     public void delete(Long id) {
-        log.debug("Request to delete LanguageLocal : {}", id);
+        log.debug("Request to delete LanguageLocale : {}", id);
         languageLocalRepository.deleteById(id);
     }
 }

@@ -1,6 +1,6 @@
 package de.saxms.language.service;
 
-import de.saxms.language.domain.LanguageLocal;
+import de.saxms.language.domain.LanguageLocale;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -8,17 +8,17 @@ import org.springframework.data.domain.Pageable;
 import java.util.Optional;
 
 /**
- * Service Interface for managing LanguageLocal.
+ * Service Interface for managing LanguageLocale.
  */
 public interface LanguageLocalService {
 
     /**
-     * Save a languageLocal.
+     * Save a languageLocale.
      *
-     * @param languageLocal the entity to save
+     * @param languageLocale the entity to save
      * @return the persisted entity
      */
-    LanguageLocal save(LanguageLocal languageLocal);
+    LanguageLocale save(LanguageLocale languageLocale);
 
     /**
      * Get all the languageLocals.
@@ -26,7 +26,7 @@ public interface LanguageLocalService {
      * @param pageable the pagination information
      * @return the list of entities
      */
-    Page<LanguageLocal> findAll(Pageable pageable);
+    Page<LanguageLocale> findAll(Pageable pageable);
 
 
     /**
@@ -35,7 +35,7 @@ public interface LanguageLocalService {
      * @param id the id of the entity
      * @return the entity
      */
-    Optional<LanguageLocal> findOne(Long id);
+    Optional<LanguageLocale> findOne(Long id);
 
     /**
      * Delete the "id" languageLocal.

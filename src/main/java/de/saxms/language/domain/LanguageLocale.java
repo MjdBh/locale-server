@@ -1,8 +1,6 @@
 package de.saxms.language.domain;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 
 import java.io.Serializable;
@@ -11,11 +9,11 @@ import java.util.Set;
 import java.util.Objects;
 
 /**
- * A LanguageLocal.
+ * A LanguageLocale.
  */
 @Entity
 @Table(name = "language_local")
-public class LanguageLocal implements Serializable {
+public class LanguageLocale implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
@@ -44,7 +42,7 @@ public class LanguageLocal implements Serializable {
         return name;
     }
 
-    public LanguageLocal name(String name) {
+    public LanguageLocale name(String name) {
         this.name = name;
         return this;
     }
@@ -57,7 +55,7 @@ public class LanguageLocal implements Serializable {
         return abbreviation;
     }
 
-    public LanguageLocal abbreviation(String abbreviation) {
+    public LanguageLocale abbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
     }
@@ -70,20 +68,20 @@ public class LanguageLocal implements Serializable {
         return languageEntries;
     }
 
-    public LanguageLocal languageEntries(Set<LanguageEntry> languageEntries) {
+    public LanguageLocale languageEntries(Set<LanguageEntry> languageEntries) {
         this.languageEntries = languageEntries;
         return this;
     }
 
-    public LanguageLocal addLanguageEntry(LanguageEntry languageEntry) {
+    public LanguageLocale addLanguageEntry(LanguageEntry languageEntry) {
         this.languageEntries.add(languageEntry);
-        languageEntry.setLanguageLocal(this);
+        languageEntry.setLanguageLocale(this);
         return this;
     }
 
-    public LanguageLocal removeLanguageEntry(LanguageEntry languageEntry) {
+    public LanguageLocale removeLanguageEntry(LanguageEntry languageEntry) {
         this.languageEntries.remove(languageEntry);
-        languageEntry.setLanguageLocal(null);
+        languageEntry.setLanguageLocale(null);
         return this;
     }
 
@@ -99,11 +97,11 @@ public class LanguageLocal implements Serializable {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        LanguageLocal languageLocal = (LanguageLocal) o;
-        if (languageLocal.getId() == null || getId() == null) {
+        LanguageLocale languageLocale = (LanguageLocale) o;
+        if (languageLocale.getId() == null || getId() == null) {
             return false;
         }
-        return Objects.equals(getId(), languageLocal.getId());
+        return Objects.equals(getId(), languageLocale.getId());
     }
 
     @Override
@@ -113,7 +111,7 @@ public class LanguageLocal implements Serializable {
 
     @Override
     public String toString() {
-        return "LanguageLocal{" +
+        return "LanguageLocale{" +
             "id=" + getId() +
             ", name='" + getName() + "'" +
             ", abbreviation='" + getAbbreviation() + "'" +

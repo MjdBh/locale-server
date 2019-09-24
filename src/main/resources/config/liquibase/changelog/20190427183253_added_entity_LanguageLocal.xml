@@ -15,7 +15,7 @@
     <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
 
     <!--
-        Added the entity LanguageLocal.
+        Added the entity LanguageLocale.
     -->
     <changeSet id="20190427183253-1" author="jhipster">
         <createTable tableName="language_local">
